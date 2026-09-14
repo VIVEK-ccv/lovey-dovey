@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>A Magical Journey For You 🌸💍</title>
+  <meta name="description" content="A romantic Sakura blossom journey through our cherished memories and a question from the bottom of my heart.">
+  
+  <!-- Premium Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Petal and Sparkle Canvas -->
+  <canvas id="petalsCanvas"></canvas>
+
+  <!-- Left Sakura Tree Branches (SVG) -->
+  <div class="sakura-branch sakura-branch-left" aria-hidden="true">
+    <svg viewBox="0 0 500 400" preserveAspectRatio="none">
+      <path class="branch-wood" d="M -20, -20 Q 80, 70 140, 110 T 260, 130 Q 320, 150 420, 120 Q 340, 170 240, 160 T 100, 170 Q 20, 210 -20, 230 Z" />
+      <path class="branch-wood branch-sub" d="M 120, 100 Q 180, 60 270, 40 Q 330, 30 380, 10 Q 300, 45 220, 70 Z" />
+      <path class="branch-wood branch-sub" d="M 210, 155 Q 260, 220 330, 260 Q 390, 290 440, 310 Q 360, 270 280, 220 Z" />
+      
+      <!-- Blossoms Clusters Left -->
+      <g class="blossom-cluster" transform="translate(180, 75)">
+        <circle cx="0" cy="0" r="14" class="blossom-petal" />
+        <circle cx="10" cy="-6" r="12" class="blossom-petal" />
+        <circle cx="-10" cy="-6" r="12" class="blossom-petal" />
+        <circle cx="6" cy="10" r="13" class="blossom-petal" />
+        <circle cx="-6" cy="10" r="13" class="blossom-petal" />
+        <circle cx="0" cy="0" r="4" class="blossom-center" />
+      </g>
+      <g class="blossom-cluster" transform="translate(310, 45)">
+        <circle cx="0" cy="0" r="16" class="blossom-petal" />
+        <circle cx="12" cy="-8" r="14" class="blossom-petal" />
+        <circle cx="-12" cy="-8" r="14" class="blossom-petal" />
+        <circle cx="7" cy="11" r="14" class="blossom-petal" />
+        <circle cx="-7" cy="11" r="14" class="blossom-petal" />
+        <circle cx="0" cy="0" r="5" class="blossom-center" />
+      </g>
+      <g class="blossom-cluster" transform="translate(390, 115)">
+        <circle cx="0" cy="0" r="15" class="blossom-petal" />
+        <circle cx="10" cy="-7" r="13" class="blossom-petal" />
+        <circle cx="-10" cy="-7" r="13" class="blossom-petal" />
+        <circle cx="6" cy="10" r="13" class="blossom-petal" />
+        <circle cx="0" cy="0" r="4.5" class="blossom-center" />
+      </g>
+      <g class="blossom-cluster" transform="translate(290, 195)">
+        <circle cx="0" cy="0" r="18" class="blossom-petal" />
+        <circle cx="14" cy="-8" r="15" class="blossom-petal" />
+        <circle cx="-12" cy="-9" r="15" class="blossom-petal" />
+        <circle cx="8" cy="13" r="16" class="blossom-petal" />
+        <circle cx="-8" cy="13" r="16" class="blossom-petal" />
+        <circle cx="0" cy="0" r="5.5" class="blossom-center" />
+      </g>
+      <g class="blossom-cluster" transform="translate(410, 290)">
+        <circle cx="0" cy="0" r="13" class="blossom-petal" />
+        <circle cx="9" cy="-6" r="11" class="blossom-petal" />
+        <circle cx="-9" cy="-6" r="11" class="blossom-petal" />
+        <circle cx="6" cy="9" r="11" class="blossom-petal" />
+        <circle cx="0" cy="0" r="3.5" class="blossom-center" />
+      </g>
+      <g class="blossom-cluster" transform="translate(90, 130)">
+        <circle cx="0" cy="0" r="15" class="blossom-petal" />
+        <circle cx="11" cy="-7" r="12" class="blossom-petal" />
+        <circle cx="-10" cy="-7" r="12" class="blossom-petal" />
+        <circle cx="0" cy="0" r="4" class="blossom-center" />
+      </g>
+    </svg>
+  </div>
+
+  <!-- Right Sakura Tree Branches (SVG) -->
+  <div class="sakura-branch sakura-branch-right" aria-hidden="true">
+    <svg viewBox="0 0 500 400" preserveAspectRatio="none">
+      <path class="branch-wood" d="M 520, -20 Q 420, 70 360, 110 T 240, 130 Q 180, 150 80, 120 Q 160, 170 260, 160 T 400, 170 Q 480, 210 520, 230 Z" />
+      <path class="branch-wood branch-sub" d="M 380, 100 Q 320, 60 230, 40 Q 170, 30 120, 10 Q 200, 45 280, 70 Z" />
+      <path class="branch-wood branch-sub" d="M 290, 155 Q 240, 220 170, 260 Q 110, 290 60, 310 Q 140, 270 220, 220 Z" />
+      
+      <!-- Blossoms Clusters Right -->
+      <g class="blossom-cluster" transform="translate(320, 75)">
+        <circle cx="0" cy="0" r="14" class="blossom-petal" />
+        <circle cx="10" cy="-6" r="12" class="blossom-petal" />
+        <circle cx="-10" cy="-6" r="12" class="blossom-petal" />
+        <circle cx="6" cy="10" r="13" class="blossom-petal" />
+        <circle cx="-6" cy="10" r="13" class="blossom-petal" />
+        <circle cx="0" cy="0" r="4" class="blossom-center" />
+      </g>
+      <g class="blossom-cluster" transform="translate(190, 45)">
+        <circle cx="0" cy="0" r="16" class="blossom-petal" />
+        <circle cx="12" cy="-8" r="14" class="blossom-petal" />
+        <circle cx="-12" cy="-8" r="14" class="blossom-petal" />
+        <circle cx="7" cy="11" r="14" class="blossom-petal" />
+        <circle cx="-7" cy="11" r="14" class="blossom-petal" />
+        <circle cx="0" cy="0" r="5" class="blossom-center" />
+      </g>
+      <g class="blossom-cluster" transform="translate(110, 115)">
+        <circle cx="0" cy="0" r="15" class="blossom-petal" />
+        <circle cx="10" cy="-7" r="13" class="blossom-petal" />
+        <circle cx="-10" cy="-7" r="13" class="blossom-petal" />
+        <circle cx="6" cy="10" r="13" class="blossom-petal" />
+        <circle cx="0" cy="0" r="4.5" class="blossom-center" />
+      </g>
+      <g class="blossom-cluster" transform="translate(210, 195)">
+        <circle cx="0" cy="0" r="18" class="blossom-petal" />
+        <circle cx="14" cy="-8" r="15" class="blossom-petal" />
+        <circle cx="-12" cy="-9" r="15" class="blossom-petal" />
+        <circle cx="8" cy="13" r="16" class="blossom-petal" />
+        <circle cx="-8" cy="13" r="16" class="blossom-petal" />
+        <circle cx="0" cy="0" r="5.5" class="blossom-center" />
+      </g>
+      <g class="blossom-cluster" transform="translate(90, 290)">
+        <circle cx="0" cy="0" r="13" class="blossom-petal" />
+        <circle cx="9" cy="-6" r="11" class="blossom-petal" />
+        <circle cx="-9" cy="-6" r="11" class="blossom-petal" />
+        <circle cx="6" cy="9" r="11" class="blossom-petal" />
+        <circle cx="0" cy="0" r="3.5" class="blossom-center" />
+      </g>
+      <g class="blossom-cluster" transform="translate(410, 130)">
+        <circle cx="0" cy="0" r="15" class="blossom-petal" />
+        <circle cx="11" cy="-7" r="12" class="blossom-petal" />
+        <circle cx="-10" cy="-7" r="12" class="blossom-petal" />
+        <circle cx="0" cy="0" r="4" class="blossom-center" />
+      </g>
+    </svg>
+  </div>
+
+  <!-- Ambient Floating Glow Accents -->
+  <div class="ambient-glow glow-top"></div>
+  <div class="ambient-glow glow-bottom"></div>
+
+  <!-- Header Controls: Audio & Romantic Watermark -->
+  <header class="app-header">
+    <div class="brand-tag">
+      <span class="sakura-icon">🌸</span>
+      <span class="brand-text">Our Sakura Story</span>
+    </div>
+    <div class="header-actions">
+      <button id="musicToggleBtn" class="glass-pill-btn music-btn" title="Toggle romantic music" aria-label="Toggle romantic background music">
+        <span class="music-wave" id="musicWave">
+          <i></i><i></i><i></i><i></i>
+        </span>
+        <span id="musicText">Play Melody 🎵</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Journey Wrapper -->
+  <main class="journey-main">
+    
+    <!-- Progress Stepper -->
+    <nav class="stepper-nav" aria-label="Proposal Journey Steps">
+      <div class="stepper-container">
+        <div class="step-item active" id="stepIndicator1">
+          <div class="step-circle">🎂</div>
+          <span class="step-label">Stage 1</span>
+        </div>
+        <div class="step-line" id="stepLine1"></div>
+        <div class="step-item" id="stepIndicator2">
+          <div class="step-circle">🛵</div>
+          <span class="step-label">Stage 2</span>
+        </div>
+        <div class="step-line" id="stepLine2"></div>
+        <div class="step-item" id="stepIndicator3">
+          <div class="step-circle">🌸</div>
+          <span class="step-label">Stage 3</span>
+        </div>
+        <div class="step-line" id="stepLine3"></div>
+        <div class="step-item" id="stepIndicator4">
+          <div class="step-circle">💍</div>
+          <span class="step-label">Proposal</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- STAGE 1: The Birthday Question -->
+    <section class="stage-section active" id="stage1">
+      <div class="glass-card" id="cardStage1">
+        <div class="card-badge">
+          <span class="badge-icon">✨</span>
+          <span id="s1WelcomeText">Let's see how well you know me... ❤️</span>
+        </div>
+
+        <h1 class="stage-question" id="s1QuestionText">What is my Date of Birth? 🎂</h1>
+        
+        <form class="quiz-form" id="s1Form" autocomplete="off">
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              id="s1Input" 
+              class="glow-input" 
+              placeholder="e.g. 14 September or 14/09" 
+              aria-label="Date of Birth Answer"
+              required
+            >
+            <button type="button" class="hint-trigger" id="s1HintBtn" title="Need a cute hint?">💡</button>
+          </div>
+          
+          <div class="hint-box" id="s1HintBox"></div>
+          <div class="feedback-msg" id="s1Feedback"></div>
+
+          <div class="button-group">
+            <button type="submit" class="romantic-btn primary-btn" id="s1SubmitBtn">
+              <span>Submit Answer ❤️</span>
+            </button>
+            <button type="button" class="romantic-btn next-btn hidden" id="s1NextBtn">
+              <span>Next Stage 🌸 →</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- STAGE 2: Scooty Memory -->
+    <section class="stage-section" id="stage2">
+      <div class="glass-card" id="cardStage2">
+        <div class="card-badge">
+          <span class="badge-icon">🛵</span>
+          <span>Wind in our hair, late night talks...</span>
+        </div>
+
+        <h2 class="stage-question" id="s2QuestionText">Do you remember my Scooty Number? 🛵❤️</h2>
+        
+        <form class="quiz-form" id="s2Form" autocomplete="off">
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              id="s2Input" 
+              class="glow-input uppercase-input" 
+              placeholder="e.g. MH 12 AB 1234" 
+              aria-label="Scooty Number Answer"
+              required
+            >
+            <button type="button" class="hint-trigger" id="s2HintBtn" title="Need a cute hint?">💡</button>
+          </div>
+
+          <div class="hint-box" id="s2HintBox"></div>
+          <div class="feedback-msg" id="s2Feedback"></div>
+
+          <div class="button-group">
+            <button type="submit" class="romantic-btn primary-btn" id="s2SubmitBtn">
+              <span>Check Memory 🛵</span>
+            </button>
+            <button type="button" class="romantic-btn next-btn hidden" id="s2NextBtn">
+              <span>Next Memory ✨ →</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- STAGE 3: When We First Met -->
+    <section class="stage-section" id="stage3">
+      <div class="glass-card" id="cardStage3">
+        <div class="card-badge">
+          <span class="badge-icon">🌸</span>
+          <span>Where our paths crossed...</span>
+        </div>
+
+        <h2 class="stage-question" id="s3QuestionText">Do you remember when we first met? ❤️</h2>
+        
+        <form class="quiz-form" id="s3Form" autocomplete="off">
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              id="s3Input" 
+              class="glow-input" 
+              placeholder="e.g. 12 February or First Day" 
+              aria-label="First Met Answer"
+              required
+            >
+            <button type="button" class="hint-trigger" id="s3HintBtn" title="Need a cute hint?">💡</button>
+          </div>
+
+          <div class="hint-box" id="s3HintBox"></div>
+          <div class="feedback-msg" id="s3Feedback"></div>
+
+          <div class="button-group">
+            <button type="submit" class="romantic-btn primary-btn" id="s3SubmitBtn">
+              <span>Submit Memory 🥹</span>
+            </button>
+            <button type="button" class="romantic-btn next-btn special-next-btn hidden" id="s3NextBtn">
+              <span>Something Special Awaits... 💍 →</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FINAL STAGE: The Proposal -->
+    <section class="stage-section" id="stage4">
+      <div class="glass-card proposal-card" id="cardStage4">
+        
+        <!-- Paced Romantic Narrative Lines -->
+        <div class="proposal-prelude" id="proposalPrelude">
+          <p class="prelude-line" id="line1">From all the little memories...</p>
+          <p class="prelude-line" id="line2">To every moment that made me smile...</p>
+          <p class="prelude-line" id="line3">There is something I have wanted to ask you... ❤️</p>
+        </div>
+
+        <!-- Big Reveal Question -->
+        <div class="proposal-climax" id="proposalClimax">
+          <div class="sparkle-ring-icon">💍</div>
+          <h2 class="proposal-question" id="proposalQuestionText">WILL YOU MARRY ME? 💍❤️</h2>
+          
+          <!-- Runaway & Yes Button Arena -->
+          <div class="proposal-action-arena" id="actionArena">
+            <!-- YES BUTTON -->
+            <button type="button" class="yes-btn" id="yesBtn">
+              <span class="btn-shine"></span>
+              <span class="btn-text">YES ❤️</span>
+            </button>
+
+            <!-- NO BUTTON (Runaway with playful responses) -->
+            <div class="no-btn-wrapper" id="noBtnWrapper">
+              <div class="no-tooltip hidden" id="noTooltip">Are you sure? 🥺</div>
+              <button type="button" class="no-btn" id="noBtn">
+                <span>NO 🙈</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CELEBRATION STAGE: The "She Said YES!" Grand Screen -->
+    <section class="stage-section" id="stageCelebration">
+      <div class="glass-card celebration-card" id="cardCelebration">
+        
+        <div class="celebration-hero">
+          <div class="glowing-ring-box">
+            <div class="ring-halo"></div>
+            <div class="ring-emoji">💍✨🌸</div>
+          </div>
+          <h1 class="celebration-heading" id="celebrationHeading">
+            You just made me the happiest person in the world ❤️🥹💍
+          </h1>
+          <p class="celebration-subtext" id="celebrationSubtext">
+            Here's to a lifetime of late-night rides, endless giggles, and blooming cherry blossoms together forever.
+          </p>
+        </div>
+
+        <!-- Romantic Love Letter Card -->
+        <div class="love-letter-parchment">
+          <div class="letter-stamp">❤️</div>
+          <h3 class="letter-title" id="letterTitle">A Promise From My Heart 💌</h3>
+          <p class="letter-content" id="letterBody">
+            Every smile we share, every small memory we cherish, has led us to this forever. I promise to love you, cherish you, and hold your hand through every season of life. You are my home, my dream, and my always.
+          </p>
+          <div class="letter-sign" id="letterSign">Yours Forever & Always ❤️</div>
+        </div>
+
+        <!-- Action Restart Button -->
+        <div class="celebration-actions">
+          <button type="button" class="romantic-btn restart-btn" id="restartBtn">
+            <span>Relive Our Journey 🌸</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Script dependencies -->
+  <script src="config.js"></script>
+  <script src="petals.js"></script>
+  <script src="audio.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
